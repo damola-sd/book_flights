@@ -6,9 +6,16 @@ import {
   InputLabel,
   Select,
   MenuItem,
-  Button
+  Button,
+  CircularProgress,
+  InputAdornment
 } from "@material-ui/core";
-import { Search } from '@material-ui/icons'
+import { Autocomplete } from "@material-ui/lab";
+import { Search, AddLocation } from "@material-ui/icons";
+import Arrival from "./Arrival";
+import Context from "../context";
+import axios from "axios";
+require("dotenv").config();
 
 const useStyles = makeStyles(theme => ({
   formControl: {
@@ -34,56 +41,217 @@ const useStyles = makeStyles(theme => ({
 
 const FlightsForm = () => {
   const classes = useStyles();
+  const { state, dispatch } = React.useContext(Context);
+  const [open, setOpen] = React.useState(false);
+  const [options, setOptions] = React.useState([]);
+  const [departure, setDeparture] = React.useState("");
+  const [departureCode, setDepartureCode] = React.useState("");
+  const [departureDate, setDepartureDate] = React.useState("");
+  const [returnDate, setReturnDate] = React.useState("");
+  const [cabin, setCabin] = React.useState("");
+  const [adults, setAdults] = React.useState("");
+  const [children, setChildren] = React.useState("");
+  const [infants, setInfants] = React.useState("");
+
+
+  
+
+
+  let n_date = new Date();
+  let month = n_date.getMonth() + 1;
+  var day = n_date.getDate();
+  var year = n_date.getFullYear();
+  if (month < 10) month = "0" + month.toString();
+  if (day < 10) day = "0" + day.toString();
+
+  var today = day + "-" + month + "-" + year;
+  console.log(returnDate);
+  console.log(adults);
+  console.log(children);
+  console.log(infants);
+  console.log(departureCode);
+  console.log(cabin);
+
+
+
+  const loading = open && options.length === 0;
+
+  const handleDeparture = e => {
+    setDeparture(e.target.value);
+  };
+  const handleDepartureCode = e => {
+    setDepartureCode(e.target.value);
+  };
+  const handleDepartureDate = e => {
+    setDepartureDate(e.target.value);
+  };
+  const handleReturnDate = e => {
+    setReturnDate(e.target.value);
+  };
+
+  const handleCabinType = e => {
+    setCabin(e.target.value)
+  }
+
+  const handleAdults = e => {
+    setAdults(e.target.value)
+  }
+
+  const handleChildren = e => {
+    setChildren(e.target.value)
+  }
+
+  const handleInfants = e => {
+    setInfants(e.target.value)
+  }
+
+  
+
+  
+
+  const handleSubmit = e => {
+    e.preventDefault();
+    axios
+      .post("http://www.ije-api.tcore.xyz/v1/flight/search-flight", {
+        header: {
+          cookie: "x9gXWHPzPlatxtfALr0u"
+        },
+        body: {
+          origin_destinations: [
+            {
+              departure_city: "LOS",
+              destination_city: "DXB",
+              departure_date: "12/26/2019",
+              return_date: ""
+            }
+          ],
+          search_param: {
+            no_of_adult: 1,
+            no_of_child: 1,
+            no_of_infant: 0,
+            preferred_airline_code: "EK",
+            calendar: true,
+            cabin: "All"
+          }
+        }
+      })
+      .then(res => {
+        dispatch({
+          type: "FETCH_FLIGHTS",
+          payload: res.data.body.data.itineraries
+        });
+        // console.log(res.data.body.data.itineraries[2])
+        // console.log(state.flights)
+      })
+      .catch(err => {
+        console.log(err);
+        dispatch({
+          type: "FETCH_ERROR",
+          payload: "Testing out the new reducer"
+        });
+      });
+  };
+
+  React.useEffect(() => {
+    let active = true;
+
+    if (!loading) {
+      return undefined;
+    }
+
+    (async () => {
+      const response = await fetch(
+        `http://www.ije-api.tcore.xyz/v1/plugins/cities-type-ahead/${departure}`
+      );
+      const cities = await response.json();
+      console.log(state.flights);
+
+      if (active) {
+        setOptions(cities.data);
+      }
+    })();
+
+    return () => {
+      active = false;
+    };
+  }, [loading, departure, state]);
+
+  React.useEffect(() => {
+    if (!open) {
+      setOptions([]);
+    }
+  }, [open]);
   return (
     <div className="flightSearch">
       <form>
         <FormControl className={classes.formControl}>
-          <TextField
-            className={classes.textField}
+          <Autocomplete
             id="departure"
-            placeholder="Departure"
-            required="true"
-            type="text"
+            style={{ width: 150 }}
+            open={open}
+            onOpen={() => {
+              setOpen(true);
+            }}
+            onClose={() => {
+              setOpen(false);
+            }}
+            getOptionLabel={option => option.code}
+            renderOption={option => option.name}
+            options={options}
+            loading={loading}
+            // value={option => option.code}
+            onInputChange={(e, val) => {
+              setDepartureCode(val)
+            }}
+            renderInput={params => (
+              <TextField
+                {...params}
+                // onChange=
+                value={option => option.code}
+                variant="outlined"
+                onChange={handleDeparture}
+                label="Departure"
+                fullWidth
+                InputProps={{
+                  ...params.InputProps,
+                  startAdornment: (
+                    <InputAdornment position="start">
+                      <AddLocation />
+                    </InputAdornment>
+                  ),
+                  endAdornment: (
+                    <React.Fragment>
+                      {loading ? (
+                        <CircularProgress color="inherit" size={20} />
+                      ) : null}
+                      {params.InputProps.endAdornment}
+                    </React.Fragment>
+                  )
+                }}
+              />
+            )}
           />
         </FormControl>
 
-        <FormControl className={classes.formControl}>
-          <TextField
-            className={classes.textField}
-            id="arrival"
-            placeholder="Arrival"
-            required="true"
-            type="text"
-          />
+        <FormControl>
+          <Arrival />
         </FormControl>
 
         <FormControl className={classes.formControl}>
-          <InputLabel className={classes.labelStyle} id="departure-date-label">
-            Departure Date
-          </InputLabel>
-
-          <TextField
-            labelId="departure-date-label"
-            className={classes.textField}
-            id="departure_date"
-            placeholder="Departure Date"
-            required="true"
+          <input
+            name="departure_date"
             type="date"
+            min={today}
+            onChange={handleDepartureDate}
           />
         </FormControl>
 
         <FormControl className={classes.formControl}>
-          <InputLabel className={classes.labelStyle} id="arrival-date-label">
-            Arrival Date
-          </InputLabel>
-
-          <TextField
-            labelId="arrival-date-label"
-            className={classes.textField}
-            id="arrival_date"
-            placeholder="Arrival Date"
-            required="true"
+          <input
+            name="return_date"
             type="date"
+            min={departureDate}
+            onChange={handleReturnDate}
           />
         </FormControl>
 
@@ -96,7 +264,8 @@ const FlightsForm = () => {
             labelId="class-label"
             id="cabin-class-select"
             value={"All"}
-            //   onChange={handleChange}
+            variant="outlined"
+            onChange={handleCabinType}  
           >
             <MenuItem value={"All"}>All</MenuItem>
             <MenuItem value={"First"}>First</MenuItem>
@@ -109,37 +278,43 @@ const FlightsForm = () => {
         <FormControl className={classes.formControl}>
           <TextField
             className={classes.textField}
-            id="arrival_date"
+            id="adults"
             placeholder="No of Adults"
             type="number"
+            variant="outlined"
+            onChange={handleAdults}
           />
         </FormControl>
         <FormControl className={classes.formControl}>
           <TextField
             className={classes.textField}
-            id="arrival_date"
+            id="children"
             placeholder="No of Children"
             type="number"
+            variant="outlined"
+            onChange={handleChildren}
           />
         </FormControl>
         <FormControl className={classes.formControl}>
           <TextField
             className={classes.textField}
-            id="arrival_date"
+            id="infants"
             placeholder="No of Infants"
             type="number"
+            variant="outlined"
+            onChange={handleInfants}
           />
         </FormControl>
-        <FormControl className={classes.formControl}> 
-        <Button
-        variant="contained"
-        color="primary"
-        className={classes.button}
-        startIcon={<Search />}
-      >
-        Find Flights
-      </Button>
-
+        <FormControl className={classes.formControl}>
+          <Button
+            variant="contained"
+            color="primary"
+            className={classes.button}
+            startIcon={<Search />}
+            onClick={handleSubmit}
+          >
+            Find Flights
+          </Button>
         </FormControl>
       </form>
     </div>

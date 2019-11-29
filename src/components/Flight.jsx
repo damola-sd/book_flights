@@ -5,6 +5,9 @@ const SingleFlightDetail = styled.div`
     border: 1px solid black;
     background: darkslategrey;
     border-radius: 6px;
+    margin: 5px;
+    display: flex;
+    flex
 `;
 
 const Flight = ({ flight }) => {
@@ -13,40 +16,19 @@ const Flight = ({ flight }) => {
         <SingleFlightDetail>
         <h3>Departure Details</h3>
         <div>
-            <span>Date: {flight.departure.date}</span>
+            <span>Date: {flight.origin_destinations[0].segments[0].departure.date}</span>
             <br />
-            <span>Time: {flight.departure.time}</span>
+            <span>Time: {flight.origin_destinations[0].segments[0].departure.time}</span>
+            <div>Departure City: {flight.origin_destinations[0].segments[0].departure.airport.city_name} </div>
 
-            <h5>Airport Details</h5>
-            <div>Airport Name: {flight.departure.airport.name} </div>
-            <div>Terminal: {flight.departure.airport.terminal} </div>
-            <div>Country: {flight.departure.airport.country_name} </div>
-            <div>City: {flight.departure.airport.city_name} </div>
-
-        </div>
-
-        <h3>Arrival Details</h3>
-        <div>
-            <span>Date: {flight.arrival.date}</span>
+            <h3>Arrival Details</h3>
+            <span>Date: {flight.origin_destinations[0].segments[0].arrival.date}</span>
             <br />
-            <span>Time: {flight.arrival.time}</span>
+            <span>Time: {flight.origin_destinations[0].segments[0].arrival.time}</span>
+            <div> City: {flight.origin_destinations[0].segments[0].arrival.airport.city_name} </div>
+            <div>Airline: {flight.origin_destinations[0].segments[0].operating_airline.name} </div>
+            <div>Price: {flight.pricing.provider.currency.code} {flight.pricing.provider.total_fare} </div>
 
-            <h5>Airport Details</h5>
-            <div>Airport Name: {flight.arrival.airport.name} </div>
-            <div>Terminal: {flight.arrival.airport.terminal} </div>
-            <div>Country: {flight.arrival.airport.country_name} </div>
-            <div>City: {flight.departure.airport.city_name} </div>
-
-        </div>
-        <h3>Flight Details</h3>
-        <div>
-            <span>Airline: {flight.operating_airline.name}</span>
-            <br />
-            <span>Flight Number: {flight.flight_number}</span>
-
-            <h5>Plane Details</h5>
-            <div>Plane Type: {flight.equipment.name} </div>
-            <div>Plane Code: {flight.equipment.code} </div>
 
         </div>
         </SingleFlightDetail>

@@ -1,0 +1,1132 @@
+{
+    "header": {
+        "cookie": "ayaeh33y1nw4yjtm3fdr0gzq"
+    },
+    "body": {
+        "message": "Available flights returned",
+        "status": 200,
+        "data": {
+            "has_more_result": "false",
+            "itineraries": [
+                {
+                    "origin_destinations": [
+                        {
+                            "ref_number": "0",
+                            "direction_id": "0",
+                            "elapsed_time": "0110",
+                            "segments": [
+                                {
+                                    "departure": {
+                                        "date": "2019-12-28",
+                                        "time": "08:30:00",
+                                        "airport": {
+                                            "code": "LOS",
+                                            "name": "Lagos-Murtala Muhammed Intl, Nigeria",
+                                            "city_code": "",
+                                            "city_name": "Lagos",
+                                            "country_code": "NG",
+                                            "country_name": "Nigeria",
+                                            "terminal": ""
+                                        }
+                                    },
+                                    "arrival": {
+                                        "date": "2019-12-28",
+                                        "time": "09:40:00",
+                                        "airport": {
+                                            "code": "ABV",
+                                            "name": "Abuja-Nnamdi Azikiwe Intl, Nigeria",
+                                            "city_code": "",
+                                            "city_name": "Abuja",
+                                            "country_code": "NG",
+                                            "country_name": "Nigeria",
+                                            "terminal": ""
+                                        }
+                                    },
+                                    "flight_number": "7232",
+                                    "res_book_desig_code": "X",
+                                    "flight_duration": "",
+                                    "operating_airline": {
+                                        "code": "P4",
+                                        "name": "Air Peace Limited"
+                                    },
+                                    "equipment": {
+                                        "code": "733",
+                                        "name": "Boeing 737-300"
+                                    },
+                                    "marketing_airline": {
+                                        "code": "P4",
+                                        "name": "Air Peace Limited"
+                                    },
+                                    "baggage": [],
+                                    "cabins": [
+                                        {
+                                            "rph": "ADT",
+                                            "res_book_desig_cabin_code": "M",
+                                            "res_book_desig_cabin_name": "Economy"
+                                        },
+                                        {
+                                            "rph": "CHD",
+                                            "res_book_desig_cabin_code": "M",
+                                            "res_book_desig_cabin_name": "Economy"
+                                        }
+                                    ]
+                                }
+                            ],
+                            "option_pricing_info": ""
+                        }
+                    ],
+                    "validating_airline_code": "P4",
+                    "combination_id": "0",
+                    "sequence_number": "0",
+                    "cabin": {
+                        "code": "M",
+                        "name": "Economy"
+                    },
+                    "pricing": {
+                        "provider": {
+                            "currency": {
+                                "code": "NGN",
+                                "unit": "naira",
+                                "decimal": 0
+                            },
+                            "base_fare": "14000",
+                            "mark_up_fare": "0",
+                            "total_fare": "45502",
+                            "fare_break_down": [
+                                {
+                                    "passenger": {
+                                        "code": "ADT",
+                                        "quantity": "1"
+                                    },
+                                    "provider_fare": {
+                                        "base": "8000",
+                                        "taxes": [
+                                            "15851"
+                                        ],
+                                        "total": "23851"
+                                    },
+                                    "ticket_designator": [
+                                        {
+                                            "ticket_designator_code": "|",
+                                            "ticket_designator_extension": "TICKETS ARE NON-REFUNDABLE|"
+                                        },
+                                        {
+                                            "ticket_designator_code": "|",
+                                            "ticket_designator_extension": "LAST TKT DTE|28DEC19| - DATE OF ORIGIN|"
+                                        }
+                                    ]
+                                },
+                                {
+                                    "passenger": {
+                                        "code": "CHD",
+                                        "quantity": "1"
+                                    },
+                                    "provider_fare": {
+                                        "base": "6000",
+                                        "taxes": [
+                                            "15651"
+                                        ],
+                                        "total": "21651"
+                                    },
+                                    "ticket_designator": [
+                                        {
+                                            "ticket_designator_code": "|",
+                                            "ticket_designator_extension": "TICKETS ARE NON-REFUNDABLE|"
+                                        },
+                                        {
+                                            "ticket_designator_code": "|",
+                                            "ticket_designator_extension": "LAST TKT DTE|28DEC19| - DATE OF ORIGIN|"
+                                        }
+                                    ]
+                                }
+                            ]
+                        },
+                        "portal_fare": {
+                            "currency": {
+                                "code": "NGN",
+                                "unit": "naira",
+                                "decimal": 0
+                            },
+                            "base_fare": "45502",
+                            "mark_up_fare": {
+                                "user": 0,
+                                "role": 0,
+                                "airline": 0,
+                                "cabin": 0,
+                                "total": 0
+                            },
+                            "mark_down_fare": {
+                                "user": 0,
+                                "role": 0,
+                                "airline": 0,
+                                "cabin": 0,
+                                "total": 0
+                            },
+                            "vat": 0,
+                            "total_fare": 45502
+                        }
+                    }
+                },
+                {
+                    "origin_destinations": [
+                        {
+                            "ref_number": "1",
+                            "direction_id": "0",
+                            "elapsed_time": "0115",
+                            "segments": [
+                                {
+                                    "departure": {
+                                        "date": "2019-12-23",
+                                        "time": "06:45:00",
+                                        "airport": {
+                                            "code": "LOS",
+                                            "name": "Lagos-Murtala Muhammed Intl, Nigeria",
+                                            "city_code": "",
+                                            "city_name": "Lagos",
+                                            "country_code": "NG",
+                                            "country_name": "Nigeria",
+                                            "terminal": ""
+                                        }
+                                    },
+                                    "arrival": {
+                                        "date": "2019-12-23",
+                                        "time": "08:00:00",
+                                        "airport": {
+                                            "code": "ABV",
+                                            "name": "Abuja-Nnamdi Azikiwe Intl, Nigeria",
+                                            "city_code": "",
+                                            "city_name": "Abuja",
+                                            "country_code": "NG",
+                                            "country_name": "Nigeria",
+                                            "terminal": ""
+                                        }
+                                    },
+                                    "flight_number": "7120",
+                                    "res_book_desig_code": "X",
+                                    "flight_duration": "",
+                                    "operating_airline": {
+                                        "code": "P4",
+                                        "name": "Air Peace Limited"
+                                    },
+                                    "equipment": {
+                                        "code": "733",
+                                        "name": "Boeing 737-300"
+                                    },
+                                    "marketing_airline": {
+                                        "code": "P4",
+                                        "name": "Air Peace Limited"
+                                    },
+                                    "baggage": [],
+                                    "cabins": [
+                                        {
+                                            "rph": "ADT",
+                                            "res_book_desig_cabin_code": "M",
+                                            "res_book_desig_cabin_name": "Economy"
+                                        },
+                                        {
+                                            "rph": "CHD",
+                                            "res_book_desig_cabin_code": "M",
+                                            "res_book_desig_cabin_name": "Economy"
+                                        }
+                                    ]
+                                }
+                            ],
+                            "option_pricing_info": ""
+                        }
+                    ],
+                    "validating_airline_code": "P4",
+                    "combination_id": "1",
+                    "sequence_number": "0",
+                    "cabin": {
+                        "code": "M",
+                        "name": "Economy"
+                    },
+                    "pricing": {
+                        "provider": {
+                            "currency": {
+                                "code": "NGN",
+                                "unit": "naira",
+                                "decimal": 0
+                            },
+                            "base_fare": "14000",
+                            "mark_up_fare": "0",
+                            "total_fare": "45502",
+                            "fare_break_down": [
+                                {
+                                    "passenger": {
+                                        "code": "ADT",
+                                        "quantity": "1"
+                                    },
+                                    "provider_fare": {
+                                        "base": "8000",
+                                        "taxes": [
+                                            "15851"
+                                        ],
+                                        "total": "23851"
+                                    },
+                                    "ticket_designator": [
+                                        {
+                                            "ticket_designator_code": "|",
+                                            "ticket_designator_extension": "TICKETS ARE NON-REFUNDABLE|"
+                                        },
+                                        {
+                                            "ticket_designator_code": "|",
+                                            "ticket_designator_extension": "LAST TKT DTE|28DEC19| - DATE OF ORIGIN|"
+                                        }
+                                    ]
+                                },
+                                {
+                                    "passenger": {
+                                        "code": "CHD",
+                                        "quantity": "1"
+                                    },
+                                    "provider_fare": {
+                                        "base": "6000",
+                                        "taxes": [
+                                            "15651"
+                                        ],
+                                        "total": "21651"
+                                    },
+                                    "ticket_designator": [
+                                        {
+                                            "ticket_designator_code": "|",
+                                            "ticket_designator_extension": "TICKETS ARE NON-REFUNDABLE|"
+                                        },
+                                        {
+                                            "ticket_designator_code": "|",
+                                            "ticket_designator_extension": "LAST TKT DTE|28DEC19| - DATE OF ORIGIN|"
+                                        }
+                                    ]
+                                }
+                            ]
+                        },
+                        "portal_fare": {
+                            "currency": {
+                                "code": "NGN",
+                                "unit": "naira",
+                                "decimal": 0
+                            },
+                            "base_fare": "45502",
+                            "mark_up_fare": {
+                                "user": 0,
+                                "role": 0,
+                                "airline": 0,
+                                "cabin": 0,
+                                "total": 0
+                            },
+                            "mark_down_fare": {
+                                "user": 0,
+                                "role": 0,
+                                "airline": 0,
+                                "cabin": 0,
+                                "total": 0
+                            },
+                            "vat": 0,
+                            "total_fare": 45502
+                        }
+                    }
+                },
+                {
+                    "origin_destinations": [
+                        {
+                            "ref_number": "2",
+                            "direction_id": "0",
+                            "elapsed_time": "0115",
+                            "segments": [
+                                {
+                                    "departure": {
+                                        "date": "2019-12-24",
+                                        "time": "06:45:00",
+                                        "airport": {
+                                            "code": "LOS",
+                                            "name": "Lagos-Murtala Muhammed Intl, Nigeria",
+                                            "city_code": "",
+                                            "city_name": "Lagos",
+                                            "country_code": "NG",
+                                            "country_name": "Nigeria",
+                                            "terminal": ""
+                                        }
+                                    },
+                                    "arrival": {
+                                        "date": "2019-12-24",
+                                        "time": "08:00:00",
+                                        "airport": {
+                                            "code": "ABV",
+                                            "name": "Abuja-Nnamdi Azikiwe Intl, Nigeria",
+                                            "city_code": "",
+                                            "city_name": "Abuja",
+                                            "country_code": "NG",
+                                            "country_name": "Nigeria",
+                                            "terminal": ""
+                                        }
+                                    },
+                                    "flight_number": "7120",
+                                    "res_book_desig_code": "X",
+                                    "flight_duration": "",
+                                    "operating_airline": {
+                                        "code": "P4",
+                                        "name": "Air Peace Limited"
+                                    },
+                                    "equipment": {
+                                        "code": "733",
+                                        "name": "Boeing 737-300"
+                                    },
+                                    "marketing_airline": {
+                                        "code": "P4",
+                                        "name": "Air Peace Limited"
+                                    },
+                                    "baggage": [],
+                                    "cabins": [
+                                        {
+                                            "rph": "ADT",
+                                            "res_book_desig_cabin_code": "M",
+                                            "res_book_desig_cabin_name": "Economy"
+                                        },
+                                        {
+                                            "rph": "CHD",
+                                            "res_book_desig_cabin_code": "M",
+                                            "res_book_desig_cabin_name": "Economy"
+                                        }
+                                    ]
+                                }
+                            ],
+                            "option_pricing_info": ""
+                        }
+                    ],
+                    "validating_airline_code": "P4",
+                    "combination_id": "2",
+                    "sequence_number": "0",
+                    "cabin": {
+                        "code": "M",
+                        "name": "Economy"
+                    },
+                    "pricing": {
+                        "provider": {
+                            "currency": {
+                                "code": "NGN",
+                                "unit": "naira",
+                                "decimal": 0
+                            },
+                            "base_fare": "14000",
+                            "mark_up_fare": "0",
+                            "total_fare": "45502",
+                            "fare_break_down": [
+                                {
+                                    "passenger": {
+                                        "code": "ADT",
+                                        "quantity": "1"
+                                    },
+                                    "provider_fare": {
+                                        "base": "8000",
+                                        "taxes": [
+                                            "15851"
+                                        ],
+                                        "total": "23851"
+                                    },
+                                    "ticket_designator": [
+                                        {
+                                            "ticket_designator_code": "|",
+                                            "ticket_designator_extension": "TICKETS ARE NON-REFUNDABLE|"
+                                        },
+                                        {
+                                            "ticket_designator_code": "|",
+                                            "ticket_designator_extension": "LAST TKT DTE|28DEC19| - DATE OF ORIGIN|"
+                                        }
+                                    ]
+                                },
+                                {
+                                    "passenger": {
+                                        "code": "CHD",
+                                        "quantity": "1"
+                                    },
+                                    "provider_fare": {
+                                        "base": "6000",
+                                        "taxes": [
+                                            "15651"
+                                        ],
+                                        "total": "21651"
+                                    },
+                                    "ticket_designator": [
+                                        {
+                                            "ticket_designator_code": "|",
+                                            "ticket_designator_extension": "TICKETS ARE NON-REFUNDABLE|"
+                                        },
+                                        {
+                                            "ticket_designator_code": "|",
+                                            "ticket_designator_extension": "LAST TKT DTE|28DEC19| - DATE OF ORIGIN|"
+                                        }
+                                    ]
+                                }
+                            ]
+                        },
+                        "portal_fare": {
+                            "currency": {
+                                "code": "NGN",
+                                "unit": "naira",
+                                "decimal": 0
+                            },
+                            "base_fare": "45502",
+                            "mark_up_fare": {
+                                "user": 0,
+                                "role": 0,
+                                "airline": 0,
+                                "cabin": 0,
+                                "total": 0
+                            },
+                            "mark_down_fare": {
+                                "user": 0,
+                                "role": 0,
+                                "airline": 0,
+                                "cabin": 0,
+                                "total": 0
+                            },
+                            "vat": 0,
+                            "total_fare": 45502
+                        }
+                    }
+                },
+                {
+                    "origin_destinations": [
+                        {
+                            "ref_number": "3",
+                            "direction_id": "0",
+                            "elapsed_time": "0115",
+                            "segments": [
+                                {
+                                    "departure": {
+                                        "date": "2019-12-25",
+                                        "time": "06:45:00",
+                                        "airport": {
+                                            "code": "LOS",
+                                            "name": "Lagos-Murtala Muhammed Intl, Nigeria",
+                                            "city_code": "",
+                                            "city_name": "Lagos",
+                                            "country_code": "NG",
+                                            "country_name": "Nigeria",
+                                            "terminal": ""
+                                        }
+                                    },
+                                    "arrival": {
+                                        "date": "2019-12-25",
+                                        "time": "08:00:00",
+                                        "airport": {
+                                            "code": "ABV",
+                                            "name": "Abuja-Nnamdi Azikiwe Intl, Nigeria",
+                                            "city_code": "",
+                                            "city_name": "Abuja",
+                                            "country_code": "NG",
+                                            "country_name": "Nigeria",
+                                            "terminal": ""
+                                        }
+                                    },
+                                    "flight_number": "7120",
+                                    "res_book_desig_code": "X",
+                                    "flight_duration": "",
+                                    "operating_airline": {
+                                        "code": "P4",
+                                        "name": "Air Peace Limited"
+                                    },
+                                    "equipment": {
+                                        "code": "733",
+                                        "name": "Boeing 737-300"
+                                    },
+                                    "marketing_airline": {
+                                        "code": "P4",
+                                        "name": "Air Peace Limited"
+                                    },
+                                    "baggage": [],
+                                    "cabins": [
+                                        {
+                                            "rph": "ADT",
+                                            "res_book_desig_cabin_code": "M",
+                                            "res_book_desig_cabin_name": "Economy"
+                                        },
+                                        {
+                                            "rph": "CHD",
+                                            "res_book_desig_cabin_code": "M",
+                                            "res_book_desig_cabin_name": "Economy"
+                                        }
+                                    ]
+                                }
+                            ],
+                            "option_pricing_info": ""
+                        }
+                    ],
+                    "validating_airline_code": "P4",
+                    "combination_id": "3",
+                    "sequence_number": "0",
+                    "cabin": {
+                        "code": "M",
+                        "name": "Economy"
+                    },
+                    "pricing": {
+                        "provider": {
+                            "currency": {
+                                "code": "NGN",
+                                "unit": "naira",
+                                "decimal": 0
+                            },
+                            "base_fare": "14000",
+                            "mark_up_fare": "0",
+                            "total_fare": "45502",
+                            "fare_break_down": [
+                                {
+                                    "passenger": {
+                                        "code": "ADT",
+                                        "quantity": "1"
+                                    },
+                                    "provider_fare": {
+                                        "base": "8000",
+                                        "taxes": [
+                                            "15851"
+                                        ],
+                                        "total": "23851"
+                                    },
+                                    "ticket_designator": [
+                                        {
+                                            "ticket_designator_code": "|",
+                                            "ticket_designator_extension": "TICKETS ARE NON-REFUNDABLE|"
+                                        },
+                                        {
+                                            "ticket_designator_code": "|",
+                                            "ticket_designator_extension": "LAST TKT DTE|28DEC19| - DATE OF ORIGIN|"
+                                        }
+                                    ]
+                                },
+                                {
+                                    "passenger": {
+                                        "code": "CHD",
+                                        "quantity": "1"
+                                    },
+                                    "provider_fare": {
+                                        "base": "6000",
+                                        "taxes": [
+                                            "15651"
+                                        ],
+                                        "total": "21651"
+                                    },
+                                    "ticket_designator": [
+                                        {
+                                            "ticket_designator_code": "|",
+                                            "ticket_designator_extension": "TICKETS ARE NON-REFUNDABLE|"
+                                        },
+                                        {
+                                            "ticket_designator_code": "|",
+                                            "ticket_designator_extension": "LAST TKT DTE|28DEC19| - DATE OF ORIGIN|"
+                                        }
+                                    ]
+                                }
+                            ]
+                        },
+                        "portal_fare": {
+                            "currency": {
+                                "code": "NGN",
+                                "unit": "naira",
+                                "decimal": 0
+                            },
+                            "base_fare": "45502",
+                            "mark_up_fare": {
+                                "user": 0,
+                                "role": 0,
+                                "airline": 0,
+                                "cabin": 0,
+                                "total": 0
+                            },
+                            "mark_down_fare": {
+                                "user": 0,
+                                "role": 0,
+                                "airline": 0,
+                                "cabin": 0,
+                                "total": 0
+                            },
+                            "vat": 0,
+                            "total_fare": 45502
+                        }
+                    }
+                },
+                {
+                    "origin_destinations": [
+                        {
+                            "ref_number": "4",
+                            "direction_id": "0",
+                            "elapsed_time": "0115",
+                            "segments": [
+                                {
+                                    "departure": {
+                                        "date": "2019-12-26",
+                                        "time": "06:45:00",
+                                        "airport": {
+                                            "code": "LOS",
+                                            "name": "Lagos-Murtala Muhammed Intl, Nigeria",
+                                            "city_code": "",
+                                            "city_name": "Lagos",
+                                            "country_code": "NG",
+                                            "country_name": "Nigeria",
+                                            "terminal": ""
+                                        }
+                                    },
+                                    "arrival": {
+                                        "date": "2019-12-26",
+                                        "time": "08:00:00",
+                                        "airport": {
+                                            "code": "ABV",
+                                            "name": "Abuja-Nnamdi Azikiwe Intl, Nigeria",
+                                            "city_code": "",
+                                            "city_name": "Abuja",
+                                            "country_code": "NG",
+                                            "country_name": "Nigeria",
+                                            "terminal": ""
+                                        }
+                                    },
+                                    "flight_number": "7120",
+                                    "res_book_desig_code": "X",
+                                    "flight_duration": "",
+                                    "operating_airline": {
+                                        "code": "P4",
+                                        "name": "Air Peace Limited"
+                                    },
+                                    "equipment": {
+                                        "code": "733",
+                                        "name": "Boeing 737-300"
+                                    },
+                                    "marketing_airline": {
+                                        "code": "P4",
+                                        "name": "Air Peace Limited"
+                                    },
+                                    "baggage": [],
+                                    "cabins": [
+                                        {
+                                            "rph": "ADT",
+                                            "res_book_desig_cabin_code": "M",
+                                            "res_book_desig_cabin_name": "Economy"
+                                        },
+                                        {
+                                            "rph": "CHD",
+                                            "res_book_desig_cabin_code": "M",
+                                            "res_book_desig_cabin_name": "Economy"
+                                        }
+                                    ]
+                                }
+                            ],
+                            "option_pricing_info": ""
+                        }
+                    ],
+                    "validating_airline_code": "P4",
+                    "combination_id": "4",
+                    "sequence_number": "0",
+                    "cabin": {
+                        "code": "M",
+                        "name": "Economy"
+                    },
+                    "pricing": {
+                        "provider": {
+                            "currency": {
+                                "code": "NGN",
+                                "unit": "naira",
+                                "decimal": 0
+                            },
+                            "base_fare": "14000",
+                            "mark_up_fare": "0",
+                            "total_fare": "45502",
+                            "fare_break_down": [
+                                {
+                                    "passenger": {
+                                        "code": "ADT",
+                                        "quantity": "1"
+                                    },
+                                    "provider_fare": {
+                                        "base": "8000",
+                                        "taxes": [
+                                            "15851"
+                                        ],
+                                        "total": "23851"
+                                    },
+                                    "ticket_designator": [
+                                        {
+                                            "ticket_designator_code": "|",
+                                            "ticket_designator_extension": "TICKETS ARE NON-REFUNDABLE|"
+                                        },
+                                        {
+                                            "ticket_designator_code": "|",
+                                            "ticket_designator_extension": "LAST TKT DTE|28DEC19| - DATE OF ORIGIN|"
+                                        }
+                                    ]
+                                },
+                                {
+                                    "passenger": {
+                                        "code": "CHD",
+                                        "quantity": "1"
+                                    },
+                                    "provider_fare": {
+                                        "base": "6000",
+                                        "taxes": [
+                                            "15651"
+                                        ],
+                                        "total": "21651"
+                                    },
+                                    "ticket_designator": [
+                                        {
+                                            "ticket_designator_code": "|",
+                                            "ticket_designator_extension": "TICKETS ARE NON-REFUNDABLE|"
+                                        },
+                                        {
+                                            "ticket_designator_code": "|",
+                                            "ticket_designator_extension": "LAST TKT DTE|28DEC19| - DATE OF ORIGIN|"
+                                        }
+                                    ]
+                                }
+                            ]
+                        },
+                        "portal_fare": {
+                            "currency": {
+                                "code": "NGN",
+                                "unit": "naira",
+                                "decimal": 0
+                            },
+                            "base_fare": "45502",
+                            "mark_up_fare": {
+                                "user": 0,
+                                "role": 0,
+                                "airline": 0,
+                                "cabin": 0,
+                                "total": 0
+                            },
+                            "mark_down_fare": {
+                                "user": 0,
+                                "role": 0,
+                                "airline": 0,
+                                "cabin": 0,
+                                "total": 0
+                            },
+                            "vat": 0,
+                            "total_fare": 45502
+                        }
+                    }
+                },
+                {
+                    "origin_destinations": [
+                        {
+                            "ref_number": "5",
+                            "direction_id": "0",
+                            "elapsed_time": "0115",
+                            "segments": [
+                                {
+                                    "departure": {
+                                        "date": "2019-12-27",
+                                        "time": "06:45:00",
+                                        "airport": {
+                                            "code": "LOS",
+                                            "name": "Lagos-Murtala Muhammed Intl, Nigeria",
+                                            "city_code": "",
+                                            "city_name": "Lagos",
+                                            "country_code": "NG",
+                                            "country_name": "Nigeria",
+                                            "terminal": ""
+                                        }
+                                    },
+                                    "arrival": {
+                                        "date": "2019-12-27",
+                                        "time": "08:00:00",
+                                        "airport": {
+                                            "code": "ABV",
+                                            "name": "Abuja-Nnamdi Azikiwe Intl, Nigeria",
+                                            "city_code": "",
+                                            "city_name": "Abuja",
+                                            "country_code": "NG",
+                                            "country_name": "Nigeria",
+                                            "terminal": ""
+                                        }
+                                    },
+                                    "flight_number": "7120",
+                                    "res_book_desig_code": "X",
+                                    "flight_duration": "",
+                                    "operating_airline": {
+                                        "code": "P4",
+                                        "name": "Air Peace Limited"
+                                    },
+                                    "equipment": {
+                                        "code": "733",
+                                        "name": "Boeing 737-300"
+                                    },
+                                    "marketing_airline": {
+                                        "code": "P4",
+                                        "name": "Air Peace Limited"
+                                    },
+                                    "baggage": [],
+                                    "cabins": [
+                                        {
+                                            "rph": "ADT",
+                                            "res_book_desig_cabin_code": "M",
+                                            "res_book_desig_cabin_name": "Economy"
+                                        },
+                                        {
+                                            "rph": "CHD",
+                                            "res_book_desig_cabin_code": "M",
+                                            "res_book_desig_cabin_name": "Economy"
+                                        }
+                                    ]
+                                }
+                            ],
+                            "option_pricing_info": ""
+                        }
+                    ],
+                    "validating_airline_code": "P4",
+                    "combination_id": "5",
+                    "sequence_number": "0",
+                    "cabin": {
+                        "code": "M",
+                        "name": "Economy"
+                    },
+                    "pricing": {
+                        "provider": {
+                            "currency": {
+                                "code": "NGN",
+                                "unit": "naira",
+                                "decimal": 0
+                            },
+                            "base_fare": "14000",
+                            "mark_up_fare": "0",
+                            "total_fare": "45502",
+                            "fare_break_down": [
+                                {
+                                    "passenger": {
+                                        "code": "ADT",
+                                        "quantity": "1"
+                                    },
+                                    "provider_fare": {
+                                        "base": "8000",
+                                        "taxes": [
+                                            "15851"
+                                        ],
+                                        "total": "23851"
+                                    },
+                                    "ticket_designator": [
+                                        {
+                                            "ticket_designator_code": "|",
+                                            "ticket_designator_extension": "TICKETS ARE NON-REFUNDABLE|"
+                                        },
+                                        {
+                                            "ticket_designator_code": "|",
+                                            "ticket_designator_extension": "LAST TKT DTE|28DEC19| - DATE OF ORIGIN|"
+                                        }
+                                    ]
+                                },
+                                {
+                                    "passenger": {
+                                        "code": "CHD",
+                                        "quantity": "1"
+                                    },
+                                    "provider_fare": {
+                                        "base": "6000",
+                                        "taxes": [
+                                            "15651"
+                                        ],
+                                        "total": "21651"
+                                    },
+                                    "ticket_designator": [
+                                        {
+                                            "ticket_designator_code": "|",
+                                            "ticket_designator_extension": "TICKETS ARE NON-REFUNDABLE|"
+                                        },
+                                        {
+                                            "ticket_designator_code": "|",
+                                            "ticket_designator_extension": "LAST TKT DTE|28DEC19| - DATE OF ORIGIN|"
+                                        }
+                                    ]
+                                }
+                            ]
+                        },
+                        "portal_fare": {
+                            "currency": {
+                                "code": "NGN",
+                                "unit": "naira",
+                                "decimal": 0
+                            },
+                            "base_fare": "45502",
+                            "mark_up_fare": {
+                                "user": 0,
+                                "role": 0,
+                                "airline": 0,
+                                "cabin": 0,
+                                "total": 0
+                            },
+                            "mark_down_fare": {
+                                "user": 0,
+                                "role": 0,
+                                "airline": 0,
+                                "cabin": 0,
+                                "total": 0
+                            },
+                            "vat": 0,
+                            "total_fare": 45502
+                        }
+                    }
+                },
+                {
+                    "origin_destinations": [
+                        {
+                            "ref_number": "6",
+                            "direction_id": "0",
+                            "elapsed_time": "0115",
+                            "segments": [
+                                {
+                                    "departure": {
+                                        "date": "2019-12-29",
+                                        "time": "13:00:00",
+                                        "airport": {
+                                            "code": "LOS",
+                                            "name": "Lagos-Murtala Muhammed Intl, Nigeria",
+                                            "city_code": "",
+                                            "city_name": "Lagos",
+                                            "country_code": "NG",
+                                            "country_name": "Nigeria",
+                                            "terminal": ""
+                                        }
+                                    },
+                                    "arrival": {
+                                        "date": "2019-12-29",
+                                        "time": "14:15:00",
+                                        "airport": {
+                                            "code": "ABV",
+                                            "name": "Abuja-Nnamdi Azikiwe Intl, Nigeria",
+                                            "city_code": "",
+                                            "city_name": "Abuja",
+                                            "country_code": "NG",
+                                            "country_name": "Nigeria",
+                                            "terminal": ""
+                                        }
+                                    },
+                                    "flight_number": "7222",
+                                    "res_book_desig_code": "X",
+                                    "flight_duration": "",
+                                    "operating_airline": {
+                                        "code": "P4",
+                                        "name": "Air Peace Limited"
+                                    },
+                                    "equipment": {
+                                        "code": "734",
+                                        "name": "Boeing 737-400"
+                                    },
+                                    "marketing_airline": {
+                                        "code": "P4",
+                                        "name": "Air Peace Limited"
+                                    },
+                                    "baggage": [],
+                                    "cabins": [
+                                        {
+                                            "rph": "ADT",
+                                            "res_book_desig_cabin_code": "M",
+                                            "res_book_desig_cabin_name": "Economy"
+                                        },
+                                        {
+                                            "rph": "CHD",
+                                            "res_book_desig_cabin_code": "M",
+                                            "res_book_desig_cabin_name": "Economy"
+                                        }
+                                    ]
+                                }
+                            ],
+                            "option_pricing_info": ""
+                        }
+                    ],
+                    "validating_airline_code": "P4",
+                    "combination_id": "6",
+                    "sequence_number": "0",
+                    "cabin": {
+                        "code": "M",
+                        "name": "Economy"
+                    },
+                    "pricing": {
+                        "provider": {
+                            "currency": {
+                                "code": "NGN",
+                                "unit": "naira",
+                                "decimal": 0
+                            },
+                            "base_fare": "14000",
+                            "mark_up_fare": "0",
+                            "total_fare": "45502",
+                            "fare_break_down": [
+                                {
+                                    "passenger": {
+                                        "code": "ADT",
+                                        "quantity": "1"
+                                    },
+                                    "provider_fare": {
+                                        "base": "8000",
+                                        "taxes": [
+                                            "15851"
+                                        ],
+                                        "total": "23851"
+                                    },
+                                    "ticket_designator": [
+                                        {
+                                            "ticket_designator_code": "|",
+                                            "ticket_designator_extension": "TICKETS ARE NON-REFUNDABLE|"
+                                        },
+                                        {
+                                            "ticket_designator_code": "|",
+                                            "ticket_designator_extension": "LAST TKT DTE|28DEC19| - DATE OF ORIGIN|"
+                                        }
+                                    ]
+                                },
+                                {
+                                    "passenger": {
+                                        "code": "CHD",
+                                        "quantity": "1"
+                                    },
+                                    "provider_fare": {
+                                        "base": "6000",
+                                        "taxes": [
+                                            "15651"
+                                        ],
+                                        "total": "21651"
+                                    },
+                                    "ticket_designator": [
+                                        {
+                                            "ticket_designator_code": "|",
+                                            "ticket_designator_extension": "TICKETS ARE NON-REFUNDABLE|"
+                                        },
+                                        {
+                                            "ticket_designator_code": "|",
+                                            "ticket_designator_extension": "LAST TKT DTE|28DEC19| - DATE OF ORIGIN|"
+                                        }
+                                    ]
+                                }
+                            ]
+                        },
+                        "portal_fare": {
+                            "currency": {
+                                "code": "NGN",
+                                "unit": "naira",
+                                "decimal": 0
+                            },
+                            "base_fare": "45502",
+                            "mark_up_fare": {
+                                "user": 0,
+                                "role": 0,
+                                "airline": 0,
+                                "cabin": 0,
+                                "total": 0
+                            },
+                            "mark_down_fare": {
+                                "user": 0,
+                                "role": 0,
+                                "airline": 0,
+                                "cabin": 0,
+                                "total": 0
+                            },
+                            "vat": 0,
+                            "total_fare": 45502
+                        }
+                    }
+                }
+            ],
+            "one_way_combinable_fares": []
+        },
+        "additional_message": [
+            "Do not make use of the result in the response_from_provider_node. Its only there for the API testing purpose. It will be stripped off on completion of the API",
+            "Please call the getNextflightResult endpoint is has_more_result = true"
+        ]
+    }
+}

@@ -59,7 +59,7 @@ const FlightsForm = () => {
   var year = n_date.getFullYear();
   if (month < 10) month = "0" + month.toString();
   if (day < 10) day = "0" + day.toString();
-  var today = day + "-" + month + "-" + year;
+  var today = year + "-" + month + "-" + day;
 
   const convertDate = strDate => {
     var oldDate = new Date(strDate);
@@ -76,7 +76,7 @@ const FlightsForm = () => {
   let FreturnDate = convertDate(returnDate);
 
   console.log(today);
-  console.log(FreturnDate);
+  console.log(departureDate);
   console.log(adults);
   console.log(children);
   console.log(infants);
@@ -144,7 +144,7 @@ const FlightsForm = () => {
       .then(res => {
         dispatch({
           type: "FETCH_FLIGHTS",
-          payload: res.data.body.data.itineraries[0].origin_destinations[0].segments
+          payload: res.data.body.data.itineraries
         });
         // console.log(res.data.body.data.itineraries[2])
         // console.log(state.flights)
@@ -269,7 +269,7 @@ const FlightsForm = () => {
             className={classes.textField}
             labelId="class-label"
             id="cabin-class-select"
-            value={"All"}
+            // value={"All"}
             variant="outlined"
             onChange={handleCabinType}
           >

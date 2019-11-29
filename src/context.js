@@ -2,7 +2,8 @@ import { createContext } from "react";
 
 const context = createContext({
     flights: [],
-    errors: []
+    errors: [],
+    returnCode: ""
 });
 
 

@@ -53,25 +53,37 @@ const FlightsForm = () => {
   const [children, setChildren] = React.useState("");
   const [infants, setInfants] = React.useState("");
 
-
-  
-
-
   let n_date = new Date();
   let month = n_date.getMonth() + 1;
   var day = n_date.getDate();
   var year = n_date.getFullYear();
   if (month < 10) month = "0" + month.toString();
   if (day < 10) day = "0" + day.toString();
-
   var today = day + "-" + month + "-" + year;
-  console.log(returnDate);
+
+  const convertDate = strDate => {
+    var oldDate = new Date(strDate);
+    let month = oldDate.getMonth() + 1;
+    var day = oldDate.getDate();
+    var year = oldDate.getFullYear();
+    if (month < 10) month = "0" + month.toString();
+    if (day < 10) day = "0" + day.toString();
+    var newDate = month + "/" + day + "/" + year
+    return newDate;
+  };
+  
+  let FdepartureDate = convertDate(departureDate);
+  let FreturnDate = convertDate(returnDate);
+
+  console.log(today);
+  console.log(FreturnDate);
   console.log(adults);
   console.log(children);
   console.log(infants);
   console.log(departureCode);
+  console.log(state.returnCode);
   console.log(cabin);
-
+  console.log(state.flights);
 
 
   const loading = open && options.length === 0;
@@ -79,9 +91,7 @@ const FlightsForm = () => {
   const handleDeparture = e => {
     setDeparture(e.target.value);
   };
-  const handleDepartureCode = e => {
-    setDepartureCode(e.target.value);
-  };
+
   const handleDepartureDate = e => {
     setDepartureDate(e.target.value);
   };
@@ -90,24 +100,20 @@ const FlightsForm = () => {
   };
 
   const handleCabinType = e => {
-    setCabin(e.target.value)
-  }
+    setCabin(e.target.value);
+  };
 
   const handleAdults = e => {
-    setAdults(e.target.value)
-  }
+    setAdults(e.target.value);
+  };
 
   const handleChildren = e => {
-    setChildren(e.target.value)
-  }
+    setChildren(e.target.value);
+  };
 
   const handleInfants = e => {
-    setInfants(e.target.value)
-  }
-
-  
-
-  
+    setInfants(e.target.value);
+  };
 
   const handleSubmit = e => {
     e.preventDefault();
@@ -119,26 +125,26 @@ const FlightsForm = () => {
         body: {
           origin_destinations: [
             {
-              departure_city: "LOS",
-              destination_city: "DXB",
-              departure_date: "12/26/2019",
-              return_date: ""
+              departure_city: departureCode,
+              destination_city: state.returnCode,
+              departure_date: FdepartureDate,
+              return_date: FreturnDate,
             }
           ],
           search_param: {
-            no_of_adult: 1,
-            no_of_child: 1,
-            no_of_infant: 0,
-            preferred_airline_code: "EK",
+            no_of_adult: adults,
+            no_of_child: children ,
+            no_of_infant: infants,
+            preferred_airline_code: "",
             calendar: true,
-            cabin: "All"
+            cabin: cabin,
           }
         }
       })
       .then(res => {
         dispatch({
           type: "FETCH_FLIGHTS",
-          payload: res.data.body.data.itineraries
+          payload: res.data.body.data.itineraries[0].origin_destinations[0].segments
         });
         // console.log(res.data.body.data.itineraries[2])
         // console.log(state.flights)
@@ -147,7 +153,7 @@ const FlightsForm = () => {
         console.log(err);
         dispatch({
           type: "FETCH_ERROR",
-          payload: "Testing out the new reducer"
+          payload: err
         });
       });
   };
@@ -201,7 +207,7 @@ const FlightsForm = () => {
             loading={loading}
             // value={option => option.code}
             onInputChange={(e, val) => {
-              setDepartureCode(val)
+              setDepartureCode(val);
             }}
             renderInput={params => (
               <TextField
@@ -265,7 +271,7 @@ const FlightsForm = () => {
             id="cabin-class-select"
             value={"All"}
             variant="outlined"
-            onChange={handleCabinType}  
+            onChange={handleCabinType}
           >
             <MenuItem value={"All"}>All</MenuItem>
             <MenuItem value={"First"}>First</MenuItem>

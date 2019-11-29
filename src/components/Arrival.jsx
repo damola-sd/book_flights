@@ -4,14 +4,19 @@ import Autocomplete from '@material-ui/lab/Autocomplete';
 import CircularProgress from '@material-ui/core/CircularProgress';
 import InputAdornment from '@material-ui/core/InputAdornment';
 import { AddLocation } from '@material-ui/icons';
+import Context from "../context";
+
 
 
 
 export default function Arrival() {
+  const { state, dispatch } = React.useContext(Context);
   const [open, setOpen] = React.useState(false);
   const [options, setOptions] = React.useState([]);
   const loading = open && options.length === 0;
   const [arrival, setArrival] = React.useState("");
+  
+
 
   const handleArrival = e => {
     setArrival(e.target.value);
@@ -56,7 +61,14 @@ export default function Arrival() {
       onClose={() => {
         setOpen(false);
       }}
-      getOptionLabel={option => option.name}
+      getOptionLabel={option => option.code}
+      renderOption={option => option.name}
+      onInputChange={(e, val) => {
+        dispatch({
+          type: "ARRIVAL_STATE",
+          payload: val
+        })
+      }}
       options={options}
       loading={loading}
       renderInput={params => (

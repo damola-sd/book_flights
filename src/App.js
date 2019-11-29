@@ -1,5 +1,6 @@
 import React from "react";
 import FlightsForm from "../src/components/FlightsForm";
+import FlightResults from '../src/components/FlightResults';
 import "./App.css";
 import Context from "./context";
 import reducer from "./reducer";
@@ -12,6 +13,7 @@ function App() {
     <div className="App">
       <Context.Provider value={{ state, dispatch }}>
         <FlightsForm />
+        <FlightResults />
       </Context.Provider>
     </div>
   );

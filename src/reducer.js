@@ -10,6 +10,11 @@ export default function reducer(state, { type, payload }) {
                 ...state,
                 errors: payload.errors
             }
+        case "ARRIVAL_STATE":
+            return {
+                ...state,
+                returnCode: payload
+            }
 
         default: 
             return state;

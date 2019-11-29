@@ -42,7 +42,7 @@ export default function Arrival() {
     }
 
     (async () => {
-      const response = await fetch(`http://www.ije-api.tcore.xyz/v1/plugins/cities-type-ahead/${arrival}`);
+      const response = await fetch(`https://www.ije-api.tcore.xyz/v1/plugins/cities-type-ahead/${arrival}`);
       const cities = await response.json();
 
       if (active) {

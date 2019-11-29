@@ -118,7 +118,7 @@ const FlightsForm = () => {
   const handleSubmit = e => {
     e.preventDefault();
     axios
-      .post("http://www.ije-api.tcore.xyz/v1/flight/search-flight", {
+      .post("https://www.ije-api.tcore.xyz/v1/flight/search-flight", {
         header: {
           cookie: "x9gXWHPzPlatxtfALr0u"
         },
@@ -167,7 +167,7 @@ const FlightsForm = () => {
 
     (async () => {
       const response = await fetch(
-        `http://www.ije-api.tcore.xyz/v1/plugins/cities-type-ahead/${departure}`
+        `https://www.ije-api.tcore.xyz/v1/plugins/cities-type-ahead/${departure}`
       );
       const cities = await response.json();
       console.log(state.flights);

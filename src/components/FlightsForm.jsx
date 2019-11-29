@@ -15,6 +15,7 @@ import { Search, AddLocation } from "@material-ui/icons";
 import Arrival from "./Arrival";
 import Context from "../context";
 import axios from "axios";
+import styled from "styled-components";
 require("dotenv").config();
 
 const useStyles = makeStyles(theme => ({
@@ -75,15 +76,6 @@ const FlightsForm = () => {
   let FdepartureDate = convertDate(departureDate);
   let FreturnDate = convertDate(returnDate);
 
-  console.log(today);
-  console.log(departureDate);
-  console.log(adults);
-  console.log(children);
-  console.log(infants);
-  console.log(departureCode);
-  console.log(state.returnCode);
-  console.log(cabin);
-  console.log(state.flights);
 
 
   const loading = open && options.length === 0;
@@ -188,7 +180,7 @@ const FlightsForm = () => {
     }
   }, [open]);
   return (
-    <div className="flightSearch">
+    <FlightSearch>
       <form>
         <FormControl className={classes.formControl}>
           <Autocomplete
@@ -323,8 +315,17 @@ const FlightsForm = () => {
           </Button>
         </FormControl>
       </form>
-    </div>
+    </FlightSearch>
   );
 };
+
+const FlightSearch = styled.div`
+  background-color: white;
+  width: 95%;
+  margin: auto;
+  margin-top: 5opx;
+  border-radius: 8px;
+  box-shadow: 5px 10px black;
+`;
 
 export default FlightsForm;

@@ -35,7 +35,7 @@ const useStyles = makeStyles(theme => ({
   },
   labelStyle: {
     margin: theme.spacing(1),
-    fontSize: 10
+    fontSize: 12
   }
 }));
 
@@ -261,7 +261,7 @@ const FlightsForm = () => {
           />
         </FormControl>
 
-        <FormControl>
+        <FormControl className={classes.formControl}>
           <InputLabel className={classes.labelStyle} id="class-label">
             Cabin Class
           </InputLabel>

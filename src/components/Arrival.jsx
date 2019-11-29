@@ -3,13 +3,24 @@ import TextField from '@material-ui/core/TextField';
 import Autocomplete from '@material-ui/lab/Autocomplete';
 import CircularProgress from '@material-ui/core/CircularProgress';
 import InputAdornment from '@material-ui/core/InputAdornment';
+import FormControl from "@material-ui/core/FormControl";
 import { AddLocation } from '@material-ui/icons';
 import Context from "../context";
+import { makeStyles } from "@material-ui/core/styles";
 
 
+
+const useStyles = makeStyles(theme => ({
+  formControl: {
+    margin: theme.spacing(2),
+    // minWidth: 120,
+    Width: 250
+  },
+}));
 
 
 export default function Arrival() {
+  const classes = useStyles();
   const { state, dispatch } = React.useContext(Context);
   const [open, setOpen] = React.useState(false);
   const [options, setOptions] = React.useState([]);
@@ -51,7 +62,8 @@ export default function Arrival() {
   }, [open]);
 
   return (
-    <Autocomplete
+    <FormControl className={classes.formControl}>
+        <Autocomplete
       id="arrival"
       style={{ width: 150 }}
       open={open}
@@ -96,5 +108,7 @@ export default function Arrival() {
         />
       )}
     />
+    </FormControl>
+  
   );
 }

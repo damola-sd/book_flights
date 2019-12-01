@@ -4,10 +4,11 @@ import { Card, CardActions, CardContent, Button, Typography } from "@material-ui
 
 const useStyles = makeStyles({
     card: {
-      maxWidth: 300,
+      maxWidth: 450,
       margin: "auto",
+      marginTop: 10,
       display: 'flex',
-      flexDirection: 'row',
+      justifyContent: 'center',
       boxShadow: '5px 10px black',
       borderRadius: '6px',
     },
@@ -59,8 +60,9 @@ const classes = useStyles();
               Price: {flight.pricing.provider.currency.code}{" "}
             {flight.pricing.provider.total_fare}{" "}
               </Typography>
+              <br></br>
               <Typography className={classes.title} color="textSecondary"gutterBottom>
-              >Arrival Details
+              Arrival Details
               </Typography>
               <Typography variant="h5" component="h5">
               Date: {flight.origin_destinations[0].segments[0].arrival.date}
@@ -77,7 +79,7 @@ const classes = useStyles();
             }{" "}
               </Typography>
               <CardActions>
-        <Button className={classes.price} size="small">Book Now</Button>
+        <Button className={classes.price} size="medium" color="primary">Book Now</Button>
       </CardActions>
           </CardContent>
       </Card>

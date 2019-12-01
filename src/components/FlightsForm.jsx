@@ -261,15 +261,15 @@ const FlightsForm = () => {
             className={classes.textField}
             labelId="class-label"
             id="cabin-class-select"
-            // value={"All"}
+            value={"All"}
             variant="outlined"
             onChange={handleCabinType}
           >
             <MenuItem value={"All"}>All</MenuItem>
-            <MenuItem value={"First"}>First</MenuItem>
-            <MenuItem value={"Premium"}>Premium</MenuItem>
-            <MenuItem value={"Economy"}>Economy</MenuItem>
+            <MenuItem value={"First"}>First Class</MenuItem>
             <MenuItem value={"Business"}>Business</MenuItem>
+            <MenuItem value={"Premium"}>Premium Economy</MenuItem>
+            <MenuItem value={"Economy"}>Economy</MenuItem>
           </Select>
         </FormControl>
 
